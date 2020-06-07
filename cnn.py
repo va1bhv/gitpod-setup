@@ -89,12 +89,13 @@ training_history = classifier.fit(
     X_train, y_train, batch_size=batch_size, epochs=epochs, verbose=1, validation_data=(X_test, y_test))
 print('The model has been trained successfully.')
 
-# Saving the trained Classifier.
-# classifier.save('mnist.h5')
-# print('Saving the model as mnist.h5')
 
 """# **Evaluating the Classifier**"""
 
 score = classifier.evaluate(X_test, y_test, verbose=0)
 print(f'Test loss: {score[0]}')
 print(f'Test accuracy: {score[1]}')
+
+# Saving the trained Classifier.
+classifier.save('classifier.h5')
+print('Saving the model as classifier.h5')
