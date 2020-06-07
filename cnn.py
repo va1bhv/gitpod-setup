@@ -95,6 +95,6 @@ print('The model has been trained successfully.')
 
 """# **Evaluating the Classifier**"""
 
-score = model.evaluate(X_test, y_test, verbose=0)
+score = classifier.evaluate(X_test, y_test, verbose=0)
 print(f'Test loss: {score[0]}')
 print(f'Test accuracy: {score[1]}')
